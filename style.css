@@ -1,0 +1,291 @@
+:root {
+  --rosa-claro: #ffe7ec;
+  --rosa-pastel: #fad0d8;
+  --rosa-medio: #f28ca6;
+  --rosa-forte: #e75480;
+  --rosa-escuro: #b03060;
+  --offwhite: #fff9fb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gabarito", Arial, Helvetica, sans-serif;
+}
+
+/* ===== Fundo mais rosado ===== */
+body {
+  background: linear-gradient(
+    180deg,
+    var(--rosa-pastel) 0%,
+    var(--rosa-claro) 60%,
+    #ffeef3 100%
+  );
+  color: var(--rosa-escuro);
+  line-height: 1.6;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ===== Códigos decorativos rosas ===== */
+body::before {
+  content: "</html> <div> function() { } </div> <body>";
+  position: fixed;
+  top: 10%;
+  left: 5%;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgba(231, 84, 128, 0.08); /* rosa bem clarinho */
+  white-space: pre-wrap;
+  line-height: 2;
+  z-index: -1;
+}
+
+body::after {
+  content: "<header> { CSS: ♥ } </header> <section></section>";
+  position: fixed;
+  bottom: 12%;
+  right: 6%;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: rgba(176, 48, 96, 0.06); /* rosa escuro bem suave */
+  white-space: pre-wrap;
+  line-height: 2;
+  z-index: -1;
+}
+
+/* ===== Mais códigos em branco ===== */
+body .bg-code-1,
+body .bg-code-2 {
+  position: fixed;
+  font-size: 2rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.08); /* branco bem clarinho */
+  z-index: -1;
+  pointer-events: none;
+  white-space: pre-wrap;
+}
+
+body .bg-code-1 {
+  top: 25%;
+  right: 15%;
+  content: "<script> console.log('Hello!') </script>";
+}
+
+body .bg-code-2 {
+  bottom: 20%;
+  left: 12%;
+  content: "<main> portfolio(); </main>";
+}
+
+
+
+/* ===== Header ===== */
+header {
+  padding: 4rem 1rem 3rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--rosa-escuro);
+}
+
+header p.intro {
+  color: #6b1844;
+  max-width: 600px;
+  margin: 1rem auto;
+  font-size: 1.1rem;
+}
+
+nav {
+  margin-top: 1.5rem;
+}
+
+nav a {
+  display: inline-block;
+  margin: 0.25rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 9999px;
+  background: var(--rosa-forte);
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.2s;
+}
+
+nav a:hover {
+  background: var(--rosa-escuro);
+  transform: scale(1.05);
+}
+
+/* ===== Sections ===== */
+section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+section h2 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: var(--rosa-escuro);
+}
+
+/* ===== Cards ===== */
+.card {
+  background: var(--offwhite);
+  border: 1px solid var(--rosa-pastel);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(230, 50, 120, 0.2);
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(230, 50, 120, 0.3);
+}
+
+/* ===== Skills ===== */
+.skills span {
+  display: inline-block;
+  background: var(--rosa-claro);
+  border: 1px solid var(--rosa-medio);
+  padding: 0.35rem 0.9rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0.3rem;
+  color: var(--rosa-escuro);
+  box-shadow: 0 1px 4px rgba(230, 50, 120, 0.15);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.skills span:hover {
+  background: var(--rosa-forte);
+  color: #fff;
+  transform: scale(1.08);
+}
+
+/* ===== Projects ===== */
+.projects {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.projects article {
+  background: var(--offwhite);
+  border: 1px solid var(--rosa-pastel);
+  border-radius: 1rem;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.projects article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(230, 50, 120, 0.3);
+}
+
+.projects h4 {
+  margin-top: 0.5rem;
+  color: var(--rosa-forte);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.projects p {
+  flex: 1;
+  margin: 0.7rem 0;
+  font-size: 0.95rem;
+}
+
+.projects .links a {
+  margin-right: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.btn-demo {
+  background: var(--rosa-forte);
+  color: #fff;
+}
+
+.btn-demo:hover {
+  background: var(--rosa-escuro);
+  transform: scale(1.05);
+}
+
+.btn-code {
+  border: 1px solid var(--rosa-medio);
+  color: var(--rosa-escuro);
+}
+
+.btn-code:hover {
+  background: var(--rosa-claro);
+  transform: scale(1.05);
+}
+
+/* ===== Contact ===== */
+.contact .botoes a,
+.btn-linkedin {
+  display: inline-block;
+  margin: 0.25rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 9999px;
+  background: var(--rosa-forte);
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.contact .botoes a:hover,
+.btn-linkedin:hover {
+  background: var(--rosa-escuro);
+  transform: scale(1.05);
+}
+
+.btn-linkedin {
+  background-color: #0077b5;
+  border-radius: 8px;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.85rem;
+  color: var(--rosa-escuro);
+  background: var(--rosa-claro);
+  margin-top: 2rem;
+  border-top: 1px solid var(--rosa-medio);
+}
+
+/* ===== Profile Pic ===== */
+header .profile-pic {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--rosa-forte);
+  box-shadow: 0 4px 12px rgba(230, 50, 120, 0.3);
+  margin-bottom: 1rem;
+}
+
+
